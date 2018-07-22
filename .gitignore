@@ -1,0 +1,4 @@
+tmp/
+.code/
+.idea/
+*.log
