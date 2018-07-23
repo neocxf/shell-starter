@@ -4,6 +4,11 @@ echo -e "Enter the file name: \c"
 
 read file_name
 
+if (( -f file_name && -w file_name)); then
+    echo "file exists and have write permissions"
+else
+    echo "file not exists or doesn't have write permissions"
+fi
 
 if [ -f $file_name ] && [ -w $file_name ]; then # and op 1
     echo "file exists and have write permissions"
