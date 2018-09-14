@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# you can check the details at https://www.cnblogs.com/liupuLearning/p/6206415.html
+
 echo -e "Enter the file name: \c"
 
 read file_name
@@ -56,4 +58,16 @@ if [ -r $file_name ]; then
     echo "$file_name is readable file"
 else
     echo "$file_name is not a readable file"
+fi
+
+if test -z $file_name; then
+    echo "empty"
+else
+    echo "non empty"
+fi
+
+if test -n $file_name; then
+    echo "non empty"
+else
+    echo "empty"
 fi
